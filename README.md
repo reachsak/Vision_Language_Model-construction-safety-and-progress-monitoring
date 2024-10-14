@@ -1,8 +1,7 @@
 # Vision Language Model for Construction Site Progress and Safety Monitoring
 
-**Date:** January 2024 – Present  
-**Institution:** Virginia Polytechnic Institute and State University
-
+## Manuscript
+Under preparation...
 ## Demo
 
 ### Site Progress and Safety Monitoring

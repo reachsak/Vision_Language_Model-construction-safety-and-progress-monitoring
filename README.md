@@ -1,8 +1,6 @@
 # Vision Language Model for Construction Site Progress and Safety Monitoring
 
-## Manuscript
-Under preparation...
-## Demo
+## Video Demo
 
 ### Site Progress and Safety Monitoring
 
@@ -13,6 +11,10 @@ Under preparation...
 
 [![Watch the demo video 2](https://img.youtube.com/vi/ozWKWEN83lY/0.jpg)](https://www.youtube.com/watch?v=ozWKWEN83lY)  
 *Click on the image to view the video.*
+
+## Manuscript
+Under preparation...
+
 
 ## Project Overview
 

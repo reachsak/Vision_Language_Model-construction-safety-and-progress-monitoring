@@ -1,0 +1,491 @@
+[1731302953] [examples/llava/minicpmv-cli.cpp:  460][                    main] Log start
+[1731302953] [            common/log.h:  589][   log_dump_cmdline_impl] Cmd: ./llama-minicpmv-cli -m /Users/reachsak/newllamacpp/llama.cpp/minicpmmodel/ggml-model-f16.gguf --mmproj /Users/reachsak/newllamacpp/llama.cpp/minicpmmodel/mmproj-model-f16-2.gguf -c 4096 --temp 0.7 --top-p 0.8 --top-k 100 --repeat-penalty 1.05 --video /Users/reachsak/newllamacpp/llama.cpp/minicpmmodel/855271-hd_1920_1080_25fps.mp4 -p "You are a construction site manager, your task to report the progress of the construction site based on the provided video and also assess the safety of the worker. descripbe the video and progress as detail as you can,mention some changes take place in the video where possible"
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: loaded meta data with 22 key-value pairs and 339 tensors from /Users/reachsak/newllamacpp/llama.cpp/minicpmmodel/ggml-model-f16.gguf (version GGUF V3 (latest))
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   0:                       general.architecture str              = qwen2
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   1:                               general.name str              = model
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   2:                          qwen2.block_count u32              = 28
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   3:                       qwen2.context_length u32              = 32768
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   4:                     qwen2.embedding_length u32              = 3584
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   5:                  qwen2.feed_forward_length u32              = 18944
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   6:                 qwen2.attention.head_count u32              = 28
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   7:              qwen2.attention.head_count_kv u32              = 4
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   8:                       qwen2.rope.freq_base f32              = 1000000.000000
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv   9:     qwen2.attention.layer_norm_rms_epsilon f32              = 0.000001
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  10:                          general.file_type u32              = 1
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  11:                       tokenizer.ggml.model str              = gpt2
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  12:                         tokenizer.ggml.pre str              = qwen2
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,151666]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  14:                  tokenizer.ggml.token_type arr[i32,151666]  = [3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  15:                      tokenizer.ggml.merges arr[str,151387]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 151644
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 151645
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 128244
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  20:                    tokenizer.chat_template str              = {% for message in messages %}{% if lo...
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - kv  21:               general.quantization_version u32              = 2
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - type  f32:  141 tensors
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_model_loader: - type  f16:  198 tensors
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_vocab: special tokens cache size = 25
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_vocab: token to piece cache size = 0.9309 MB
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: format           = GGUF V3 (latest)
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: arch             = qwen2
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: vocab type       = BPE
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_vocab          = 151666
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_merges         = 151387
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_ctx_train      = 32768
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_embd           = 3584
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_head           = 28
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_head_kv        = 4
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_layer          = 28
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_rot            = 128
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_embd_head_k    = 128
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_embd_head_v    = 128
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_gqa            = 7
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_embd_k_gqa     = 512
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_embd_v_gqa     = 512
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: f_norm_eps       = 0.0e+00
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: f_norm_rms_eps   = 1.0e-06
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: f_logit_scale    = 0.0e+00
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_ff             = 18944
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_expert         = 0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_expert_used    = 0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: causal attn      = 1
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: pooling type     = 0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: rope type        = 2
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: rope scaling     = linear
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: freq_base_train  = 1000000.0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: freq_scale_train = 1
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: n_ctx_orig_yarn  = 32768
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: rope_finetuned   = unknown
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: ssm_d_conv       = 0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: ssm_d_inner      = 0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: ssm_d_state      = 0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: ssm_dt_rank      = 0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: model type       = ?B
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: model ftype      = F16
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: model params     = 7.61 B
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: model size       = 14.18 GiB (16.00 BPW) 
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: general.name     = model
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: BOS token        = 151644 '<|im_start|>'
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: EOS token        = 151645 '<|im_end|>'
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: UNK token        = 128244 '<unk>'
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: PAD token        = 0 '!'
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: LF token         = 148848 'ÄĬ'
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: EOT token        = 151645 '<|im_end|>'
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_print_meta: max token length = 256
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_tensors: ggml ctx size =    0.30 MiB
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_backend_metal_log_allocated_size: allocated buffer, size = 13484.06 MiB, (13484.12 / 21845.34)[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] 
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_tensors: offloading 28 repeating layers to GPU
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_tensors: offloading non-repeating layers to GPU
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_tensors: offloaded 29/29 layers to GPU
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_tensors:      Metal buffer size = 13484.06 MiB
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llm_load_tensors:        CPU buffer size =  1036.78 MiB
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] .[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] 
+[1731302953] clip_model_load: description:  image encoder for MiniCPM-V
+[1731302953] clip_model_load: GGUF version: 3
+[1731302953] clip_model_load: alignment:    32
+[1731302953] clip_model_load: n_tensors:    455
+[1731302953] clip_model_load: n_kv:         19
+[1731302953] clip_model_load: ftype:        f16
+[1731302953] 
+[1731302953] clip_model_load: loaded meta data with 19 key-value pairs and 455 tensors from /Users/reachsak/newllamacpp/llama.cpp/minicpmmodel/mmproj-model-f16-2.gguf
+[1731302953] clip_model_load: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+[1731302953] clip_model_load: - kv   0:                       general.architecture str              = clip
+[1731302953] clip_model_load: - kv   1:                      clip.has_text_encoder bool             = false
+[1731302953] clip_model_load: - kv   2:                    clip.has_vision_encoder bool             = true
+[1731302953] clip_model_load: - kv   3:                clip.has_minicpmv_projector bool             = true
+[1731302953] clip_model_load: - kv   4:                          general.file_type u32              = 1
+[1731302953] clip_model_load: - kv   5:                        general.description str              = image encoder for MiniCPM-V
+[1731302953] clip_model_load: - kv   6:                        clip.projector_type str              = resampler
+[1731302953] clip_model_load: - kv   7:                      clip.minicpmv_version i32              = 3
+[1731302953] clip_model_load: - kv   8:                     clip.vision.image_size u32              = 448
+[1731302953] clip_model_load: - kv   9:                     clip.vision.patch_size u32              = 14
+[1731302953] clip_model_load: - kv  10:               clip.vision.embedding_length u32              = 1152
+[1731302953] clip_model_load: - kv  11:            clip.vision.feed_forward_length u32              = 4304
+[1731302953] clip_model_load: - kv  12:                 clip.vision.projection_dim u32              = 0
+[1731302953] clip_model_load: - kv  13:           clip.vision.attention.head_count u32              = 16
+[1731302953] clip_model_load: - kv  14:   clip.vision.attention.layer_norm_epsilon f32              = 0.000001
+[1731302953] clip_model_load: - kv  15:                    clip.vision.block_count u32              = 26
+[1731302953] clip_model_load: - kv  16:                     clip.vision.image_mean arr[f32,3]       = [0.500000, 0.500000, 0.500000]
+[1731302953] clip_model_load: - kv  17:                      clip.vision.image_std arr[f32,3]       = [0.500000, 0.500000, 0.500000]
+[1731302953] clip_model_load: - kv  18:                              clip.use_gelu bool             = true
+[1731302953] clip_model_load: - type  f32:  285 tensors
+[1731302953] clip_model_load: - type  f16:  170 tensors
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: allocating
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: found device: Apple M1 Max
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: picking default device: Apple M1 Max
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: default.metallib not found, loading from source
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GGML_METAL_PATH_RESOURCES = nil
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: loading '/Users/reachsak/newllamacpp/llama.cpp/ggml-metal.metal'
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GPU name:   Apple M1 Max
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GPU family: MTLGPUFamilyApple7  (1007)
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GPU family: MTLGPUFamilyCommon3 (3003)
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GPU family: MTLGPUFamilyMetal3  (5001)
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: simdgroup reduction support   = true
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: simdgroup matrix mul. support = true
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: hasUnifiedMemory              = true
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: recommendedMaxWorkingSetSize  = 22906.50 MB
+[1731302953] clip_model_load: CLIP using Metal backend
+[1731302953] clip_model_load: text_encoder:   0
+[1731302953] clip_model_load: vision_encoder: 1
+[1731302953] clip_model_load: llava_projector:  0
+[1731302953] clip_model_load: minicpmv_projector:  1
+[1731302953] clip_model_load: model size:     996.02 MB
+[1731302953] clip_model_load: metadata size:  0.16 MB
+[1731302953] clip_model_load: params backend buffer size =  996.02 MB (455 tensors)
+[1731302953] key clip.vision.image_grid_pinpoints not found in file
+[1731302953] key clip.vision.mm_patch_merge_type not found in file
+[1731302953] key clip.vision.image_crop_resolution not found in file
+[1731302953] clip_image_build_graph: 448 448
+[1731302953] clip_model_load: compute allocated memory: 102.80 MB
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model: n_ctx      = 4096
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model: n_batch    = 2048
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model: n_ubatch   = 512
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model: flash_attn = 0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model: freq_base  = 1000000.0
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model: freq_scale = 1
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: allocating
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: found device: Apple M1 Max
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: picking default device: Apple M1 Max
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: default.metallib not found, loading from source
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GGML_METAL_PATH_RESOURCES = nil
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: loading '/Users/reachsak/newllamacpp/llama.cpp/ggml-metal.metal'
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GPU name:   Apple M1 Max
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GPU family: MTLGPUFamilyApple7  (1007)
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GPU family: MTLGPUFamilyCommon3 (3003)
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: GPU family: MTLGPUFamilyMetal3  (5001)
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: simdgroup reduction support   = true
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: simdgroup matrix mul. support = true
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: hasUnifiedMemory              = true
+[1731302953] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] ggml_metal_init: recommendedMaxWorkingSetSize  = 22906.50 MB
+[1731302954] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_kv_cache_init:      Metal KV buffer size =   224.00 MiB
+[1731302954] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model: KV self size  =  224.00 MiB, K (f16):  112.00 MiB, V (f16):  112.00 MiB
+[1731302954] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model:        CPU  output buffer size =     0.58 MiB
+[1731302954] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model:      Metal compute buffer size =   303.22 MiB
+[1731302954] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model:        CPU compute buffer size =    15.01 MiB
+[1731302954] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model: graph nodes  = 986
+[1731302954] [examples/llava/minicpmv-cli.cpp:  167][llama_log_callback_logTee] llama_new_context_with_model: graph splits = 2
+[1731302954] [examples/llava/minicpmv-cli.cpp:  118][          extract_frames] frame_len: 23.040001
+[1731302955] uhd_slice_image: multiple 2
+[1731302955] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731302955] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731302956] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731302956] clip_image_preprocess: 602 336
+[1731302956] clip_image_preprocess: 420 476
+[1731302956] clip_image_preprocess: 420 476
+[1731302956] clip_image_build_graph: 602 336
+[1731302957] encode_image_with_clip: step 1 of 3 encoded in  1833.84 ms
+[1731302957] clip_image_build_graph: 420 476
+[1731302959] encode_image_with_clip: step 2 of 3 encoded in  1673.73 ms
+[1731302959] clip_image_build_graph: 420 476
+[1731302961] encode_image_with_clip: step 3 of 3 encoded in  1670.12 ms
+[1731302961] encode_image_with_clip: all 3 segments encoded in  5177.80 ms
+[1731302961] encode_image_with_clip: load_image_size 1280 720
+[1731302961] encode_image_with_clip: image embedding created: 192 tokens
+[1731302961] 
+encode_image_with_clip: image encoded in  5178.33 ms by CLIP (   26.97 ms per image patch)
+[1731302961] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 3
+[1731302961] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 71
+[1731302961] uhd_slice_image: multiple 2
+[1731302961] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731302961] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731302962] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731302962] clip_image_preprocess: 602 336
+[1731302962] clip_image_preprocess: 420 476
+[1731302962] clip_image_preprocess: 420 476
+[1731302962] clip_image_build_graph: 602 336
+[1731302963] encode_image_with_clip: step 1 of 3 encoded in  1683.51 ms
+[1731302963] clip_image_build_graph: 420 476
+[1731302965] encode_image_with_clip: step 2 of 3 encoded in  1671.42 ms
+[1731302965] clip_image_build_graph: 420 476
+[1731302967] encode_image_with_clip: step 3 of 3 encoded in  1742.33 ms
+[1731302967] encode_image_with_clip: all 3 segments encoded in  5097.41 ms
+[1731302967] encode_image_with_clip: load_image_size 1280 720
+[1731302967] encode_image_with_clip: image embedding created: 192 tokens
+[1731302967] 
+encode_image_with_clip: image encoded in  5097.58 ms by CLIP (   26.55 ms per image patch)
+[1731302967] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 71
+[1731302968] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 139
+[1731302968] uhd_slice_image: multiple 2
+[1731302968] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731302968] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731302968] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731302968] clip_image_preprocess: 602 336
+[1731302968] clip_image_preprocess: 420 476
+[1731302968] clip_image_preprocess: 420 476
+[1731302968] clip_image_build_graph: 602 336
+[1731302969] encode_image_with_clip: step 1 of 3 encoded in  1627.24 ms
+[1731302969] clip_image_build_graph: 420 476
+[1731302971] encode_image_with_clip: step 2 of 3 encoded in  1765.73 ms
+[1731302971] clip_image_build_graph: 420 476
+[1731302973] encode_image_with_clip: step 3 of 3 encoded in  1699.15 ms
+[1731302973] encode_image_with_clip: all 3 segments encoded in  5092.30 ms
+[1731302973] encode_image_with_clip: load_image_size 1280 720
+[1731302973] encode_image_with_clip: image embedding created: 192 tokens
+[1731302973] 
+encode_image_with_clip: image encoded in  5092.70 ms by CLIP (   26.52 ms per image patch)
+[1731302973] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 139
+[1731302973] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 207
+[1731302973] uhd_slice_image: multiple 2
+[1731302973] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731302973] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731302973] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731302973] clip_image_preprocess: 602 336
+[1731302973] clip_image_preprocess: 420 476
+[1731302973] clip_image_preprocess: 420 476
+[1731302973] clip_image_build_graph: 602 336
+[1731302975] encode_image_with_clip: step 1 of 3 encoded in  1685.14 ms
+[1731302975] clip_image_build_graph: 420 476
+[1731302977] encode_image_with_clip: step 2 of 3 encoded in  1670.58 ms
+[1731302977] clip_image_build_graph: 420 476
+[1731302979] encode_image_with_clip: step 3 of 3 encoded in  1753.42 ms
+[1731302979] encode_image_with_clip: all 3 segments encoded in  5109.80 ms
+[1731302979] encode_image_with_clip: load_image_size 1280 720
+[1731302979] encode_image_with_clip: image embedding created: 192 tokens
+[1731302979] 
+encode_image_with_clip: image encoded in  5109.90 ms by CLIP (   26.61 ms per image patch)
+[1731302979] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 207
+[1731302979] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 275
+[1731302979] uhd_slice_image: multiple 2
+[1731302979] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731302979] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731302980] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731302980] clip_image_preprocess: 602 336
+[1731302980] clip_image_preprocess: 420 476
+[1731302980] clip_image_preprocess: 420 476
+[1731302980] clip_image_build_graph: 602 336
+[1731302981] encode_image_with_clip: step 1 of 3 encoded in  1579.61 ms
+[1731302981] clip_image_build_graph: 420 476
+[1731302983] encode_image_with_clip: step 2 of 3 encoded in  1674.07 ms
+[1731302983] clip_image_build_graph: 420 476
+[1731302984] encode_image_with_clip: step 3 of 3 encoded in  1672.91 ms
+[1731302984] encode_image_with_clip: all 3 segments encoded in  4926.79 ms
+[1731302984] encode_image_with_clip: load_image_size 1280 720
+[1731302984] encode_image_with_clip: image embedding created: 192 tokens
+[1731302984] 
+encode_image_with_clip: image encoded in  4927.13 ms by CLIP (   25.66 ms per image patch)
+[1731302984] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 275
+[1731302985] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 343
+[1731302985] uhd_slice_image: multiple 2
+[1731302985] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731302985] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731302985] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731302985] clip_image_preprocess: 602 336
+[1731302985] clip_image_preprocess: 420 476
+[1731302985] clip_image_preprocess: 420 476
+[1731302985] clip_image_build_graph: 602 336
+[1731302987] encode_image_with_clip: step 1 of 3 encoded in  1578.93 ms
+[1731302987] clip_image_build_graph: 420 476
+[1731302989] encode_image_with_clip: step 2 of 3 encoded in  1686.40 ms
+[1731302989] clip_image_build_graph: 420 476
+[1731302990] encode_image_with_clip: step 3 of 3 encoded in  1698.82 ms
+[1731302990] encode_image_with_clip: all 3 segments encoded in  4964.31 ms
+[1731302990] encode_image_with_clip: load_image_size 1280 720
+[1731302990] encode_image_with_clip: image embedding created: 192 tokens
+[1731302990] 
+encode_image_with_clip: image encoded in  4964.46 ms by CLIP (   25.86 ms per image patch)
+[1731302990] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 343
+[1731302991] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 411
+[1731302991] uhd_slice_image: multiple 2
+[1731302991] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731302991] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731302991] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731302991] clip_image_preprocess: 602 336
+[1731302991] clip_image_preprocess: 420 476
+[1731302991] clip_image_preprocess: 420 476
+[1731302991] clip_image_build_graph: 602 336
+[1731302993] encode_image_with_clip: step 1 of 3 encoded in  1690.99 ms
+[1731302993] clip_image_build_graph: 420 476
+[1731302995] encode_image_with_clip: step 2 of 3 encoded in  1752.27 ms
+[1731302995] clip_image_build_graph: 420 476
+[1731302996] encode_image_with_clip: step 3 of 3 encoded in  1687.86 ms
+[1731302996] encode_image_with_clip: all 3 segments encoded in  5132.24 ms
+[1731302996] encode_image_with_clip: load_image_size 1280 720
+[1731302996] encode_image_with_clip: image embedding created: 192 tokens
+[1731302996] 
+encode_image_with_clip: image encoded in  5132.59 ms by CLIP (   26.73 ms per image patch)
+[1731302996] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 411
+[1731302997] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 479
+[1731302997] uhd_slice_image: multiple 2
+[1731302997] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731302997] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731302997] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731302997] clip_image_preprocess: 602 336
+[1731302997] clip_image_preprocess: 420 476
+[1731302997] clip_image_preprocess: 420 476
+[1731302997] clip_image_build_graph: 602 336
+[1731302999] encode_image_with_clip: step 1 of 3 encoded in  1586.53 ms
+[1731302999] clip_image_build_graph: 420 476
+[1731303001] encode_image_with_clip: step 2 of 3 encoded in  1681.93 ms
+[1731303001] clip_image_build_graph: 420 476
+[1731303002] encode_image_with_clip: step 3 of 3 encoded in  1674.71 ms
+[1731303002] encode_image_with_clip: all 3 segments encoded in  4943.35 ms
+[1731303002] encode_image_with_clip: load_image_size 1280 720
+[1731303002] encode_image_with_clip: image embedding created: 192 tokens
+[1731303002] 
+encode_image_with_clip: image encoded in  4943.51 ms by CLIP (   25.75 ms per image patch)
+[1731303002] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 479
+[1731303003] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 547
+[1731303003] uhd_slice_image: multiple 2
+[1731303003] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731303003] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731303003] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731303003] clip_image_preprocess: 602 336
+[1731303003] clip_image_preprocess: 420 476
+[1731303003] clip_image_preprocess: 420 476
+[1731303003] clip_image_build_graph: 602 336
+[1731303005] encode_image_with_clip: step 1 of 3 encoded in  1577.64 ms
+[1731303005] clip_image_build_graph: 420 476
+[1731303006] encode_image_with_clip: step 2 of 3 encoded in  1677.55 ms
+[1731303006] clip_image_build_graph: 420 476
+[1731303008] encode_image_with_clip: step 3 of 3 encoded in  1674.29 ms
+[1731303008] encode_image_with_clip: all 3 segments encoded in  4929.65 ms
+[1731303008] encode_image_with_clip: load_image_size 1280 720
+[1731303008] encode_image_with_clip: image embedding created: 192 tokens
+[1731303008] 
+encode_image_with_clip: image encoded in  4930.04 ms by CLIP (   25.68 ms per image patch)
+[1731303008] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 547
+[1731303009] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 615
+[1731303009] uhd_slice_image: multiple 2
+[1731303009] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731303009] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731303009] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731303009] clip_image_preprocess: 602 336
+[1731303009] clip_image_preprocess: 420 476
+[1731303009] clip_image_preprocess: 420 476
+[1731303009] clip_image_build_graph: 602 336
+[1731303011] encode_image_with_clip: step 1 of 3 encoded in  1714.99 ms
+[1731303011] clip_image_build_graph: 420 476
+[1731303012] encode_image_with_clip: step 2 of 3 encoded in  1678.02 ms
+[1731303012] clip_image_build_graph: 420 476
+[1731303014] encode_image_with_clip: step 3 of 3 encoded in  1681.54 ms
+[1731303014] encode_image_with_clip: all 3 segments encoded in  5074.72 ms
+[1731303014] encode_image_with_clip: load_image_size 1280 720
+[1731303014] encode_image_with_clip: image embedding created: 192 tokens
+[1731303014] 
+encode_image_with_clip: image encoded in  5074.82 ms by CLIP (   26.43 ms per image patch)
+[1731303014] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 615
+[1731303015] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 683
+[1731303015] uhd_slice_image: multiple 2
+[1731303015] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731303015] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731303015] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731303015] clip_image_preprocess: 602 336
+[1731303015] clip_image_preprocess: 420 476
+[1731303015] clip_image_preprocess: 420 476
+[1731303015] clip_image_build_graph: 602 336
+[1731303016] encode_image_with_clip: step 1 of 3 encoded in  1668.95 ms
+[1731303016] clip_image_build_graph: 420 476
+[1731303018] encode_image_with_clip: step 2 of 3 encoded in  1682.48 ms
+[1731303018] clip_image_build_graph: 420 476
+[1731303020] encode_image_with_clip: step 3 of 3 encoded in  1674.42 ms
+[1731303020] encode_image_with_clip: all 3 segments encoded in  5026.01 ms
+[1731303020] encode_image_with_clip: load_image_size 1280 720
+[1731303020] encode_image_with_clip: image embedding created: 192 tokens
+[1731303020] 
+encode_image_with_clip: image encoded in  5026.11 ms by CLIP (   26.18 ms per image patch)
+[1731303020] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 683
+[1731303021] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 751
+[1731303021] uhd_slice_image: multiple 2
+[1731303021] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731303021] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731303021] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731303021] clip_image_preprocess: 602 336
+[1731303021] clip_image_preprocess: 420 476
+[1731303021] clip_image_preprocess: 420 476
+[1731303021] clip_image_build_graph: 602 336
+[1731303022] encode_image_with_clip: step 1 of 3 encoded in  1579.85 ms
+[1731303022] clip_image_build_graph: 420 476
+[1731303024] encode_image_with_clip: step 2 of 3 encoded in  1679.31 ms
+[1731303024] clip_image_build_graph: 420 476
+[1731303026] encode_image_with_clip: step 3 of 3 encoded in  1749.48 ms
+[1731303026] encode_image_with_clip: all 3 segments encoded in  5008.80 ms
+[1731303026] encode_image_with_clip: load_image_size 1280 720
+[1731303026] encode_image_with_clip: image embedding created: 192 tokens
+[1731303026] 
+encode_image_with_clip: image encoded in  5009.18 ms by CLIP (   26.09 ms per image patch)
+[1731303026] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 751
+[1731303027] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 819
+[1731303027] uhd_slice_image: multiple 2
+[1731303027] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731303027] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731303027] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731303027] clip_image_preprocess: 602 336
+[1731303027] clip_image_preprocess: 420 476
+[1731303027] clip_image_preprocess: 420 476
+[1731303027] clip_image_build_graph: 602 336
+[1731303028] encode_image_with_clip: step 1 of 3 encoded in  1589.10 ms
+[1731303028] clip_image_build_graph: 420 476
+[1731303030] encode_image_with_clip: step 2 of 3 encoded in  1675.83 ms
+[1731303030] clip_image_build_graph: 420 476
+[1731303032] encode_image_with_clip: step 3 of 3 encoded in  1674.27 ms
+[1731303032] encode_image_with_clip: all 3 segments encoded in  4939.37 ms
+[1731303032] encode_image_with_clip: load_image_size 1280 720
+[1731303032] encode_image_with_clip: image embedding created: 192 tokens
+[1731303032] 
+encode_image_with_clip: image encoded in  4939.54 ms by CLIP (   25.73 ms per image patch)
+[1731303032] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 819
+[1731303032] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 887
+[1731303032] uhd_slice_image: multiple 2
+[1731303032] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731303032] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731303033] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731303033] clip_image_preprocess: 602 336
+[1731303033] clip_image_preprocess: 420 476
+[1731303033] clip_image_preprocess: 420 476
+[1731303033] clip_image_build_graph: 602 336
+[1731303034] encode_image_with_clip: step 1 of 3 encoded in  1667.70 ms
+[1731303034] clip_image_build_graph: 420 476
+[1731303036] encode_image_with_clip: step 2 of 3 encoded in  1681.67 ms
+[1731303036] clip_image_build_graph: 420 476
+[1731303038] encode_image_with_clip: step 3 of 3 encoded in  1688.19 ms
+[1731303038] encode_image_with_clip: all 3 segments encoded in  5037.72 ms
+[1731303038] encode_image_with_clip: load_image_size 1280 720
+[1731303038] encode_image_with_clip: image embedding created: 192 tokens
+[1731303038] 
+encode_image_with_clip: image encoded in  5037.91 ms by CLIP (   26.24 ms per image patch)
+[1731303038] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 887
+[1731303038] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 955
+[1731303038] uhd_slice_image: multiple 2
+[1731303039] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731303039] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731303039] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731303039] clip_image_preprocess: 602 336
+[1731303039] clip_image_preprocess: 420 476
+[1731303039] clip_image_preprocess: 420 476
+[1731303039] clip_image_build_graph: 602 336
+[1731303040] encode_image_with_clip: step 1 of 3 encoded in  1595.00 ms
+[1731303040] clip_image_build_graph: 420 476
+[1731303042] encode_image_with_clip: step 2 of 3 encoded in  1745.93 ms
+[1731303042] clip_image_build_graph: 420 476
+[1731303044] encode_image_with_clip: step 3 of 3 encoded in  1675.51 ms
+[1731303044] encode_image_with_clip: all 3 segments encoded in  5017.16 ms
+[1731303044] encode_image_with_clip: load_image_size 1280 720
+[1731303044] encode_image_with_clip: image embedding created: 192 tokens
+[1731303044] 
+encode_image_with_clip: image encoded in  5017.25 ms by CLIP (   26.13 ms per image patch)
+[1731303044] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 955
+[1731303044] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 1023
+[1731303044] uhd_slice_image: multiple 2
+[1731303044] uhd_slice_image: image_size: 1280 720; source_image size: 602 336
+[1731303044] uhd_slice_image: image_size: 1280 720; best_grid: 2 1
+[1731303044] uhd_slice_image: refine_image_size: 840 476; refine_size: 840 476
+[1731303044] clip_image_preprocess: 602 336
+[1731303044] clip_image_preprocess: 420 476
+[1731303044] clip_image_preprocess: 420 476
+[1731303044] clip_image_build_graph: 602 336
+[1731303046] encode_image_with_clip: step 1 of 3 encoded in  1680.01 ms
+[1731303046] clip_image_build_graph: 420 476
+[1731303048] encode_image_with_clip: step 2 of 3 encoded in  1692.13 ms
+[1731303048] clip_image_build_graph: 420 476
+[1731303049] encode_image_with_clip: step 3 of 3 encoded in  1690.56 ms
+[1731303049] encode_image_with_clip: all 3 segments encoded in  5062.84 ms
+[1731303049] encode_image_with_clip: load_image_size 1280 720
+[1731303049] encode_image_with_clip: image embedding created: 192 tokens
+[1731303049] 
+encode_image_with_clip: image encoded in  5063.02 ms by CLIP (   26.37 ms per image patch)
+[1731303049] [examples/llava/minicpmv-cli.cpp:  288][           process_image] process_image: image token past: 1023
+[1731303050] [examples/llava/minicpmv-cli.cpp:  307][           process_image] process_image: image token past: 1091

@@ -1,0 +1,3 @@
+[1724035296] [examples/llava/minicpmv-cli.cpp:  160][    show_additional_info] 
+ example usage: ./llama-minicpmv-cli -m <llava-v1.5-7b/ggml-model-q5_k.gguf> --mmproj <llava-v1.5-7b/mmproj-model-f16.gguf> [--video <path/to/an/video.mp4>] [--image <path/to/an/image.jpg>] [--image <path/to/another/image.jpg>] [--temp 0.1] [-p "describe the image in detail."]
+[1724035296] [examples/llava/minicpmv-cli.cpp:  161][    show_additional_info]   note: a lower temperature value like 0.1 is recommended for better quality.

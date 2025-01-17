@@ -38,7 +38,8 @@ This project involves developing a vision-based language model to monitor constr
 
 ### Installation
 
-*Coming soon...*
+Install LLamacpp and MinicpmV
+Run above python file
 
 ## Contributing
 

@@ -10,7 +10,9 @@ This project involves developing a vision-language model (VLM)-based autonomous 
 The vision-language model-based AI system is designed to autonomously analyze live video feeds from construction sites to detect unsafe worker behavior and hazardous conditions. Leveraging advanced video analysis capabilities, the system identifies potential safety violations, such as workers not wearing personal protective equipment (PPE) or operating machinery unsafely. Upon detecting such conditions, the AI agent generates real-time alerts or detailed safety reports. This functionality facilitates more proactive safety management, enabling swift intervention to prevent accidents and ensure adherence to safety protocols.
 [![Watch the demo video 1](https://img.youtube.com/vi/YAbu5tAo1wY/0.jpg)](https://www.youtube.com/watch?v=YAbu5tAo1wY)  
 *Click on the image to view the video.*
-###  Video Demo
+
+### Video Demo
+
 ### Construction Site Analysis (In progress) 
 The AI system also focuses on automating construction progress tracking. By analyzing image and video data from construction sites, the system identifies and evaluates ongoing work, providing regular updates on project milestones and completion rates. It can pinpoint areas that require attention, flagging delays or inefficiencies in real time. The generated detailed progress reports offer project managers a clearer understanding of the construction status, enabling informed decision-making and more efficient project management.
 

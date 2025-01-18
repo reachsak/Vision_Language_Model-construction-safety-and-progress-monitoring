@@ -5,6 +5,17 @@
 ## Project Overview
 
 This project involves developing a vision-language model (VLM)-based autonomous system to monitor construction site progress and safety conditions, thereby providing a comprehensive analysis of construction sites to ensure ongoing progress and adherence to safety protocols.
+## Video Demo
+
+### Construction Site Safety Monitoring
+
+[![Watch the demo video 1](https://img.youtube.com/vi/YAbu5tAo1wY/0.jpg)](https://www.youtube.com/watch?v=YAbu5tAo1wY)  
+*Click on the image to view the video.*
+
+### Construction Site Analysis
+
+[![Watch the demo video 2](https://img.youtube.com/vi/ozWKWEN83lY/0.jpg)](https://www.youtube.com/watch?v=ozWKWEN83lY)  
+*Click on the image to view the video.*
 
 ## Safety Monitoring (In progress)
 
@@ -21,23 +32,7 @@ The AI system also focuses on automating construction progress tracking. By anal
 - **Progress Tracking and Reporting:** Monitors construction progress by analyzing video and image data, providing regular updates and identifying areas needing attention.
 - **Proactive and Efficient Management:** Supports swift decision-making and intervention by offering actionable insights for both safety and progress monitoring.
 
-## Benefits
 
-This research aims to revolutionize construction site management by introducing automation to critical aspects of safety and progress tracking. The developed vision-language model enhances safety oversight by providing timely alerts and ensures that project managers stay informed about construction progress through automated updates. This approach reduces the reliance on manual monitoring, streamlines management processes, and supports the development of safer and more efficient construction sites.
-
-
-
-## Video Demo
-
-### Construction Site Safety Monitoring
-
-[![Watch the demo video 1](https://img.youtube.com/vi/YAbu5tAo1wY/0.jpg)](https://www.youtube.com/watch?v=YAbu5tAo1wY)  
-*Click on the image to view the video.*
-
-### Construction Site Analysis
-
-[![Watch the demo video 2](https://img.youtube.com/vi/ozWKWEN83lY/0.jpg)](https://www.youtube.com/watch?v=ozWKWEN83lY)  
-*Click on the image to view the video.*
 
 ### Requirements
 - Open-source Vision language model (e.g., MiniCPM V)

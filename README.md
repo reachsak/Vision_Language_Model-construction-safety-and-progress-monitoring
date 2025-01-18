@@ -1,4 +1,6 @@
 # Vision Language Model for Construction Site Progress and Safety Monitoring
+## Summary
+<img src="/fig1.png" style="float: left; margin-right: 20px; max-width: 200px;">
 
 ## Video Demo
 

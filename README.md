@@ -37,8 +37,15 @@ The AI system also focuses on automating construction progress tracking. By anal
 
 
 
-## Detailed setup guide
-Coming soon.....
+## LLM and VLM Server Setup
+
+You need to set up the **Vision Language Model server** on a host machine (e.g., a MacBook Pro):
+
+- **MiniCPM 2.6**: Used for processing **images and video** 
+Refer to the official guide for setting up MiniCPM V server:  
+👉 https://github.com/OpenBMB/MiniCPM-o
+
+---
 
 ## License
 This project is licensed under the MIT License.

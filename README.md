@@ -47,8 +47,6 @@ Refer to the official guide for setting up MiniCPM V server:
 
 ---
 
-## License
-This project is licensed under the MIT License.
 
 ## Manuscript
 Under preparation...
